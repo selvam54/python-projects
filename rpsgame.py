@@ -4,20 +4,22 @@ import random
 print("*****************************Wellcome To Rock Paper Sissor Game*****************************")
 
 #********************PLAYER CHOICE********************
-while 1>-1:
-    playerchoice=input("enter the any rps \n ROCK\nPAPER\nSSISOR\nenter the rps:")
+while True:
+   playerchoice=input("enter the any rps \n ROCK\nPAPER\nSCISSOR\nenter the rps:")
     #*********************COMPUTER CHOICE*******************
-    list=["rock","paper","sissor"]
-    computerchoice=random.randrange(len(list))
-    print("computer choice is :",list[computerchoice])
+   list=["rock","paper","scissor"]
+   computerchoice=random.choice(list)
+   print("computer choice is",computerchoice)
 
 #********************comperision the game*********************
 
-    if playerchoice=="rock" and computerchoice=="sissor":
-        print("you win")
-    elif playerchoice=="paper" and computerchoice=="rock":
-        print("you win the game")
-    elif playerchoice=="sissor" and computerchoice=="paper":
-        print("you win")
-    else:
-        print("computer win")
+   if playerchoice=="rock" and computerchoice=="scissor":
+       print("you win")
+   elif playerchoice=="paper" and computerchoice=="rock":
+       print("you win the game")
+   elif playerchoice=="scissor" and computerchoice=="paper":
+       print("you win")
+   elif playerchoice == computerchoice:
+       print("It's a tie!")
+   else:
+       print("computer win")
