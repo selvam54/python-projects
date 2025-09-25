@@ -15,6 +15,8 @@ while True:
 #comperission the two choices
     if playerchoice == computerchoice:
       print("you correctly guess the number")
+      if playerchoice=="quit":
+          break
     else:
       print("you are lose")
 
