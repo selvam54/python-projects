@@ -10,7 +10,7 @@ player_score=0
 computer_score=0
 while True:
     
-    playerchoice=input("\nROCK\nPAPER\nSCISSOR\nenter the rps:").lower()
+    playerchoice=input(f"\nROCK \u270A\nPAPER \u270B\nSCISSOR \u270C\nenter the rps : ").lower()
 #quit section
     if playerchoice == "quit":
         break
@@ -33,7 +33,7 @@ while True:
         (playerchoice=="paper" and computerchoice=="rock") or \
         (playerchoice=="scissor" and computerchoice=="paper"):
             
-            print("you win")
+            print(f"you win ")
             player_score += 1
     else:
         print("computer win")
