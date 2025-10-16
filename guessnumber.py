@@ -1,28 +1,36 @@
 import random
 
-print("********************************guess number game*********************************************")
-score=0
-#player choice
-while True:
-    playerchoice=input(("\n1\n2\n3\n4\n5 \nenter the any number "))
-    
-    if playerchoice == "quit":
-        break
+def gussnumberplay():
+    print("******************************** Guess Number Game *********************************************")
+    score = 0
 
-#computer choice
-    list=[ "1","2","3","4","5"]
-    computerchoice=random.choice(list)
-    print("the computer choice is: ",computerchoice)
+    # Player choice loop
+    while True:
+        playerchoice = input("\nEnter a number between 1 and 5 (or 'quit' to exit): ")
 
+        # Quit condition
+        if playerchoice.lower() == "quit":
+            print("Thanks for playing!")
+            break
 
-#comperission the two choices
-    if playerchoice == computerchoice:
-      print("you correctly guess the number")
-      score += 1
-      
-      if playerchoice=="quit":
-          break
-    else:
-      print("you are lose")
+        # Validate input
+        if playerchoice not in ["1", "2", "3", "4", "5"]:
+            print("Invalid input! Please enter a number between 1 and 5.")
+            continue
 
-    print("your score is : ",score)
+        # Computer choice
+        computerchoice = random.choice(["1", "2", "3", "4", "5"])
+        print("The computer choice is:", computerchoice)
+
+        # Comparison
+        if playerchoice == computerchoice:
+            print("You correctly guessed the number!")
+            score += 1
+        else:
+            print("You lose!")
+
+        # Display score
+        print("Your score is:", score)
+
+# Run the game
+

@@ -1,27 +1,27 @@
-#calculator operators
+def calculatorplay():
+    # Loop
+    while True:
 
-#loop
-while True:
-    
-    #quit section 
-    #if  num1 == "quit":
-        #break 
-    
-    def calculator(num1,num2):
-        if user == "+":
-            return num1 + num2
-        elif user == "-":
-            return num1 - num2
-        elif user == "*":
-            return num1 * num2
-        elif user == "%":
-            return num1 % num2
-    
-#user input
-    
-    num1=int(input("enter the number : "))
-    user=input("addition + \n subraction - \n multiplication * \n divide % \n what you choose : ")
-    num2=int(input("enter the number : "))
-    
-    
-    print(f"{num1} {user} {num2} answer is : {calculator(num1,num2)}")
+        # Quit section (currently commented)
+        # if num1 == "quit":
+        #     break 
+
+        # Calculator function
+        def calculator(num1, num2):
+            if user == "+":
+                return num1 + num2
+            elif user == "-":
+                return num1 - num2
+            elif user == "*":
+                return num1 * num2
+            elif user == "%":
+                return num1 % num2
+
+        # User input
+        num1 = int(input("Enter the number: "))
+        user = input("Addition + \nSubtraction - \nMultiplication * \nDivide % \nWhat do you choose: ")
+        num2 = int(input("Enter the number: "))
+
+        # Print result
+        print(f"{num1} {user} {num2} answer is: {calculator(num1, num2)}")
+

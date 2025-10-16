@@ -1,43 +1,44 @@
 import random
 
+def rpsplay():
+    print("***************************** Welcome To Rock Paper Scissor Game *****************************")
 
-print("*****************************Wellcome To Rock Paper Sissor Game*****************************")
+    # Choices and scores
+    choices = ["rock", "paper", "scissor"]
+    player_score = 0
+    computer_score = 0
 
-#**********
-#**********PLAYER CHOICE********************
-choices=["rock","paper","scissor"]
-player_score=0
-computer_score=0
-while True:
-    
-    playerchoice=input(f"\nROCK \u270A\nPAPER \u270B\nSCISSOR \u270C\nenter the rps : ").lower()
-#quit section
-    if playerchoice == "quit":
-        break
+    while True:
+        # Player choice
+        playerchoice = input(f"\nROCK ✊\nPAPER ✋\nSCISSOR ✌\nEnter your choice (or 'quit' to exit): ").lower()
 
-   
-    #*********************COMPUTER CHOICE*******************
-    
-    computerchoice=random.choice(choices)
-    print("computer choice is : ",computerchoice)
-    
-#********************comperision the game*********************
+        # Quit section
+        if playerchoice == "quit":
+            print("Thanks for playing!")
+            break
 
-    if playerchoice == computerchoice:
-        print("tie the game")
-    elif playerchoice not in choices:
-        print("Invalid input! Please choose rock, paper, or scissor.")
-        continue
+        # Invalid input check
+        if playerchoice not in choices:
+            print("Invalid input! Please choose rock, paper, or scissor.")
+            continue
 
-    elif (playerchoice=="rock" and computerchoice=="scissor") or \
-        (playerchoice=="paper" and computerchoice=="rock") or \
-        (playerchoice=="scissor" and computerchoice=="paper"):
-            
-            print(f"you win ")
+        # Computer choice
+        computerchoice = random.choice(choices)
+        print("Computer choice is:", computerchoice)
+
+        # Comparison
+        if playerchoice == computerchoice:
+            print("Tie game!")
+        elif (playerchoice == "rock" and computerchoice == "scissor") or \
+             (playerchoice == "paper" and computerchoice == "rock") or \
+             (playerchoice == "scissor" and computerchoice == "paper"):
+            print("You win!")
             player_score += 1
-    else:
-        print("computer win")
-        computer_score += 1
-    
-    print("your score is : ",player_score,"\n computer score is : ",computer_score)   
-       
+        else:
+            print("Computer wins!")
+            computer_score += 1
+
+        # Display scores
+        print("Your score:", player_score, "\nComputer score:", computer_score)
+
+# Run the game
