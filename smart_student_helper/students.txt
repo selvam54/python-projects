@@ -1,0 +1,35 @@
+id: 1, name: selvam, age: 19, dept: bsc it
+tamil: 34
+english: 54
+math: 34
+science: 12
+social science: 56
+
+id: 2, name: af, age: 20, dept: cs
+tamil: 89
+english: 89
+math: 89
+science: 77
+social science: 60
+
+id: 3, name: xxxx, age: xx, dept: xxxx
+tamil: 33
+english: 55
+math: 66
+science: 88
+social science: 99
+
+id: 4, name: xxxx, age: xx, dept: xxxx
+tamil: 88
+english: 88
+math: 66
+science: 55
+social science: 44
+
+id: 5, name: xxxx, age: xx, dept: xx
+tamil: 89
+english: 87
+math: 65
+science: 45
+social science: 78
+
